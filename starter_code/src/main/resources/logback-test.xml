@@ -1,0 +1,35 @@
+<configuration>
+
+    <appender name="BACK_LOG_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>back-log.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logger for UserController -->
+    <logger name="com.example.demo.controllers.UserController" level="DEBUG" additivity="false">
+        <appender-ref ref="BACK_LOG_FILE" />
+    </logger>
+
+    <!-- Logger for ItemController -->
+    <logger name="com.example.demo.controllers.ItemController" level="DEBUG" additivity="false">
+        <appender-ref ref="BACK_LOG_FILE" />
+    </logger>
+
+    <!-- Logger for OrderController -->
+    <logger name="com.example.demo.controllers.OrderController" level="DEBUG" additivity="false">
+        <appender-ref ref="BACK_LOG_FILE" />
+    </logger>
+
+    <!-- Logger for CartController -->
+    <logger name="com.example.demo.controllers.CartController" level="DEBUG" additivity="false">
+        <appender-ref ref="BACK_LOG_FILE" />
+    </logger>
+
+
+    <!-- Root logger -->
+    <root level="DEBUG">
+        <appender-ref ref="BACK_LOG_FILE" />
+    </root>
+</configuration>
